@@ -34,6 +34,10 @@ class House
     each_area.sum #would have been easier to just use the room.area function & .sum
   end
 
-  
+  def price_per_square_foot
+    price_per_foot = @price[1..@price.length].to_i / area.to_f
+    price_per_foot.round(2)
+  end
+
 
 end
