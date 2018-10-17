@@ -1,3 +1,5 @@
+require "pry"
+require "./lib/room"
 class House
 
   attr_reader :price, :address, :rooms
@@ -6,6 +8,7 @@ class House
     @price = price
     @address = address
     @rooms = []
+    @room_by_cat = {}
   end
 
   def add_room(room)
@@ -45,5 +48,11 @@ class House
     }
   end
 
+  def rooms_by_category
+    @rooms.group_by { |room|
+      room.category
+    }
+
+  end
 
 end
