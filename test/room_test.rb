@@ -9,6 +9,18 @@ class RoomTest < Minitest::Test
     assert_instance_of Room, room
   end
 
+  def test_it_has_a_category
+    room = Room.new(:bedroom)
+
+    assert_equal :bedroom, room.category
+  end
+
+  def test_it_can_have_dimesions
+    room = Room.new(:bedroom, 10, 13)
+
+    assert_equal 10, room.length
+    assert_equal 13, room.width
+  end
 
 
 end
