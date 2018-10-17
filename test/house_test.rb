@@ -49,7 +49,8 @@ class HouseTest < Minitest::Test
     house.add_room(room_3)
     house.add_room(room_4)
 
-    assert_equal 2, house.rooms_from_category(:bedroom).length 
+    assert_equal 2, house.rooms_from_category(:bedroom).length
+    assert_equal 1900, house.area
   end
 
 end
