@@ -39,5 +39,11 @@ class House
     price_per_foot.round(2)
   end
 
+  def rooms_sorted_by_area
+    @rooms.sort_by { |room|
+      room.area
+    }
+  end
+
 
 end
