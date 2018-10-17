@@ -1,9 +1,10 @@
 class House
 
-  attr_reader :price
+  attr_reader :price, :address
 
-  def initialize(price)
+  def initialize(price, address)
     @price = price
-  end 
+    @address = address 
+  end
 
 end
